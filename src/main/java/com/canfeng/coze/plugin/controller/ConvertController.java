@@ -8,6 +8,7 @@ import org.springframework.web.multipart.MultipartFile;
 import java.util.Map;
 
 @RestController
+@RequestMapping("/convert")
 public class ConvertController {
 
     private final PdfService pdfService;
@@ -16,7 +17,7 @@ public class ConvertController {
         this.pdfService = pdfService;
     }
 
-    @PostMapping("/convert")
+    @PostMapping("/pdf")
     public ResponseEntity<Map<String, Object>> convert(
             @RequestParam("file") MultipartFile file,
             @RequestParam("target_format") String target,

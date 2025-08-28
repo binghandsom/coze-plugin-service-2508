@@ -5,7 +5,9 @@ spring:
   mvc:
     async:
       request-timeout: 600s
-
+  servlet:
+    multipart:
+      max-file-size: 300MB
 app:
   # 可选：未来做鉴权用
   api-key: ""
