@@ -1,0 +1,11 @@
+server:
+  port: 22282
+
+spring:
+  mvc:
+    async:
+      request-timeout: 600s
+
+app:
+  # 可选：未来做鉴权用
+  api-key: ""
